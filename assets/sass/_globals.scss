@@ -1,0 +1,39 @@
+@use "mixins.scss";
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    li{
+        list-style: none;
+    }
+}
+
+.container{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @include mixins.xs {
+        max-width: 540px;
+    }
+    @include mixins.sm {
+        max-width: 720px;
+    }
+    @include mixins.md {
+        max-width: 960px;
+    }
+    @include mixins.lg {
+        max-width: 1140px;
+    }
+    @include mixins.xl {
+        max-width: 1320px;
+    }
+}

@@ -1,0 +1,57 @@
+@use "variables";
+@use "mixins.scss";
+footer{
+    width: 100%;
+    background-color: variables.$dark;
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    @include mixins.md{
+        flex-direction: row;
+    }
+    .navegacion{
+        width: 100%;
+        max-width: 100%;
+        .enlaces{
+            display: flex;
+            flex-direction: row;
+            @include mixins.md{
+                flex-direction: column;
+            }
+            
+        }
+    }
+    .social-media{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid variables.$white;
+        width: 90px;
+        @include mixins.md{
+            flex-direction: column;
+        }
+        span{
+            width: 2*variables.$icon-size;
+            height: 2*variables.$icon-size;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            a{
+                font-size: variables.$icon-size;
+                color: variables.$white;
+                &:hover{
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
+.footer-copy{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: variables.$white;
+}
