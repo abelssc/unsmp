@@ -2,7 +2,10 @@
 @use "mixins.scss";
 footer{
     width: 100%;
-    background-color: variables.$dark;
+    background-color: variables.$bg-secondary;
+}
+.footer{
+    padding: 1rem;
 }
 .footer-content{
     display: flex;
@@ -13,11 +16,63 @@ footer{
     .navegacion{
         width: 100%;
         max-width: 100%;
+        .buscador{
+            padding: 2rem 1rem;
+            border-bottom: 1px solid variables.$white;
+           
+            form{
+                display: flex;
+                @include mixins.md{
+                    width: 30%;
+                }
+                input{
+                    padding: 0 10px;
+                    max-width: 100%;
+                    width: 100%;
+                    &:focus-visible{
+                        outline: none;
+                    }
+                }
+                button{
+                    padding: 5px;
+                    background-color: inherit;
+                    border: none;
+                    color: variables.$white;
+                    &:hover{
+                        color: #EF4429;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
         .enlaces{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            padding: 1rem;
+            color: variables.$white;
+            gap: 1rem;
+
             @include mixins.md{
-                flex-direction: column;
+                flex-direction: row;
+            }
+            &>p{
+                margin-bottom: 1rem;
+                font-size: 12px;
+                line-height: 2.4em;
+                width: 100%;
+            }
+            &>ul{
+                font-size: 11px;
+                width: 100%;
+                li{
+                    margin-bottom: 12px;
+                    :hover{
+                        color: #EF4429;
+                    }
+                }
+            }
+            a{
+                color: variables.$white;
             }
             
         }
@@ -27,10 +82,11 @@ footer{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        border-left: 1px solid variables.$white;
-        width: 90px;
+        border: none;
         @include mixins.md{
+            border-left: 1px solid variables.$white;
             flex-direction: column;
+            width: 90px;
         }
         span{
             width: 2*variables.$icon-size;
@@ -51,7 +107,8 @@ footer{
 }
 .footer-copy{
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
+    padding: 1rem;
     color: variables.$white;
+    font-size: 12px;
+    line-height: 1;
 }

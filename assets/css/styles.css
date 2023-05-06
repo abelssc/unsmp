@@ -6,6 +6,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -52,7 +53,11 @@ ul li {
 
 footer {
   width: 100%;
-  background-color: #343a40;
+  background-color: #202020;
+}
+
+.footer {
+  padding: 1rem;
 }
 
 .footer-content {
@@ -68,26 +73,79 @@ footer {
   width: 100%;
   max-width: 100%;
 }
+.footer-content .navegacion .buscador {
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #fff;
+}
+.footer-content .navegacion .buscador form {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .footer-content .navegacion .buscador form {
+    width: 30%;
+  }
+}
+.footer-content .navegacion .buscador form input {
+  padding: 0 10px;
+  max-width: 100%;
+  width: 100%;
+}
+.footer-content .navegacion .buscador form input:focus-visible {
+  outline: none;
+}
+.footer-content .navegacion .buscador form button {
+  padding: 5px;
+  background-color: inherit;
+  border: none;
+  color: #fff;
+}
+.footer-content .navegacion .buscador form button:hover {
+  color: #EF4429;
+  cursor: pointer;
+}
 .footer-content .navegacion .enlaces {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  padding: 1rem;
+  color: #fff;
+  gap: 1rem;
 }
 @media (min-width: 768px) {
   .footer-content .navegacion .enlaces {
-    flex-direction: column;
+    flex-direction: row;
   }
+}
+.footer-content .navegacion .enlaces > p {
+  margin-bottom: 1rem;
+  font-size: 12px;
+  line-height: 2.4em;
+  width: 100%;
+}
+.footer-content .navegacion .enlaces > ul {
+  font-size: 11px;
+  width: 100%;
+}
+.footer-content .navegacion .enlaces > ul li {
+  margin-bottom: 12px;
+}
+.footer-content .navegacion .enlaces > ul li :hover {
+  color: #EF4429;
+}
+.footer-content .navegacion .enlaces a {
+  color: #fff;
 }
 .footer-content .social-media {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid #fff;
-  width: 90px;
+  border: none;
 }
 @media (min-width: 768px) {
   .footer-content .social-media {
+    border-left: 1px solid #fff;
     flex-direction: column;
+    width: 90px;
   }
 }
 .footer-content .social-media span {
@@ -108,9 +166,10 @@ footer {
 
 .footer-copy {
   width: 100%;
-  text-align: center;
-  padding: 10px 0;
+  padding: 1rem;
   color: #fff;
+  font-size: 12px;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
