@@ -1,7 +1,12 @@
 @use "variables";
-@use "mixins.scss";
+@use "mixins";
 .header{
-   
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;
+   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .header__barra{
     background-color: variables.$bg-primary;
@@ -25,12 +30,16 @@
         }
    }
 }
+.header__nav{
+    background-color: variables.$white;
+}
 .header__nav .container{
     display: flex;
     justify-content: space-between;
     position: relative;
     align-items: center;
     padding: 1rem;
+    flex-wrap: wrap;
 }
 .header__nav_hamburger{
     display: block;

@@ -1,0 +1,106 @@
+@use "variables";
+@use "mixins";
+
+#inicio{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url("/assets/img/facultad_ingenieria_acreditacion.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$bg-secondary;
+        opacity: 0;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+.inicio__center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    .inicio__title{
+        font-size: 3rem;
+        color: variables.$white;
+        text-align: center;
+        margin-bottom: 1rem;
+        @include mixins.md{
+            font-size: 4rem;
+        }
+    }
+    form{
+        display: flex;
+        width: 100%;
+        #inicio__buscador{
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            &:focus{
+                outline: none;
+            }
+            
+        }
+        button[type="submit"]{
+            background-color: variables.$bg-primary;
+            color: variables.$white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            &:hover{
+                background-color: darken(variables.$bg-primary, 10%);
+            }
+        }
+        button[type="button"]{
+            background-color: variables.$bg-secondary;
+            color: variables.$white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            &:hover{
+                background-color: darken(variables.$bg-secondary, 10%);
+            }
+        }
+    }
+    .inicio__buscador__externo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        @include mixins.md{
+            justify-content: flex-start;
+        }
+        a{
+            color: variables.$txt-secondary;
+            background-color: variables.$white;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            padding: 0.5rem 1rem;
+            &:hover{
+                color: variables.$white;
+                background-color: variables.$bg-primary;
+            }
+        }
+    }
+
+}

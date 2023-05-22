@@ -53,6 +53,15 @@ ul li {
   }
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .header__barra {
   background-color: #bd1714;
   align-items: center;
@@ -74,12 +83,17 @@ ul li {
   color: #fff;
 }
 
+.header__nav {
+  background-color: #fff;
+}
+
 .header__nav .container {
   display: flex;
   justify-content: space-between;
   position: relative;
   align-items: center;
   padding: 1rem;
+  flex-wrap: wrap;
 }
 
 .header__nav_hamburger {
@@ -180,6 +194,112 @@ ul li {
 }
 .header__nav_list a:hover {
   color: #bd1714;
+}
+
+#inicio {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("/assets/img/facultad_ingenieria_acreditacion.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+#inicio .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #202020;
+  opacity: 0;
+}
+#inicio .container {
+  width: 100%;
+  height: 100%;
+}
+
+.inicio__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.inicio__center .inicio__title {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .inicio__center .inicio__title {
+    font-size: 4rem;
+  }
+}
+.inicio__center form {
+  display: flex;
+  width: 100%;
+}
+.inicio__center form #inicio__buscador {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+.inicio__center form #inicio__buscador:focus {
+  outline: none;
+}
+.inicio__center form button[type=submit] {
+  background-color: #bd1714;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.inicio__center form button[type=submit]:hover {
+  background-color: #8f110f;
+}
+.inicio__center form button[type=button] {
+  background-color: #202020;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.inicio__center form button[type=button]:hover {
+  background-color: #070707;
+}
+.inicio__center .inicio__buscador__externo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .inicio__center .inicio__buscador__externo {
+    justify-content: flex-start;
+  }
+}
+.inicio__center .inicio__buscador__externo a {
+  color: #6c757d;
+  background-color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+.inicio__center .inicio__buscador__externo a:hover {
+  color: #fff;
+  background-color: #bd1714;
 }
 
 footer {
