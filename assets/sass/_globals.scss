@@ -22,19 +22,21 @@ ul{
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    @include mixins.xs {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    @include mixins.sm {
         max-width: 540px;
     }
-    @include mixins.sm {
+    @include mixins.md {
         max-width: 720px;
     }
-    @include mixins.md {
+    @include mixins.lg {
         max-width: 960px;
     }
-    @include mixins.lg {
+    @include mixins.xl {
         max-width: 1140px;
     }
-    @include mixins.xl {
+    @include mixins.xxl {
         max-width: 1320px;
     }
 }
