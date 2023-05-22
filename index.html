@@ -156,14 +156,109 @@
         <div class="container">
             <div class="inicio__center">
                 <h1 class="inicio__title">Sistema de Bibliotecas</h1>
-                <form action="">
-                    <input type="text" name="" id="inicio__buscador" placeholder="Busque libros, articulos y m&aacute;s... ">
+                <form action="http://catalogo.sibus.usmp.edu.pe/cgi-usmp/mp2spa.exe" method="get" target="_blank">
+                    <!-- for c4 -->
+                    <input type="text" name="C5" id="inicio__buscador" placeholder="Busque libros, articulos y m&aacute;s... ">
+                    <select name="C4">
+                        <option value="Todos" selected>Todos</option>
+                        <option value="Autor">Autor</option>
+                        <option value="Titulo">Titulo</option>
+                        <option value="Tema">Tema</option>
+                        <option value="Editorial">Editorial</option>
+                        <option value="Serie">Serie</option>
+                        <option value="Facultad">Facultad</option>
+                    </select>
                     <button type="submit" title="Search" aria-label="Search">
                         <i aria-hidden="true" class="fas fa-search"></i>
                     </button>
-                    <button type="button">
+                    <button type="button" id="inicio--open-dialog">
                         <i class="fa-solid fa-sliders"></i>
                     </button>
+                    <!--========================================= MODAL =========================================-->
+                    <dialog id="inicio__dialog">
+                        <!-- for c5 -->
+                        
+                        <!-- for c7 c6-->
+                        <fieldset>
+                            <select type="text" name="C3">
+                                <option value="Y" selected>Y</option>
+                                <option value="O">O</option>
+                                <option value="NO">NO</option>
+                            </select>
+                            <!-- for c6 c3 -->
+                            <input type="text" name="C7" id="">
+                            <!-- for c7 c3 -->
+                             <select name="C6">
+                                <option value="Todos" selected>Todos</option>
+                                <option value="Autor">Autor</option>
+                                <option value="Titulo">Titulo</option>
+                                <option value="Tema">Tema</option>
+                                <option value="Editorial">Editorial</option>
+                                <option value="Serie">Serie</option>
+                                <option value="Facultad">Facultad</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            catalogo
+                            <input type=radio checked value="Todos" name=C11>Todos
+                            <input type=radio value="Libros" name=C11>Libros
+                            <input type=radio value="Tesis" name=C11>Tesis
+                            <input type=radio value="Audiovisuales" name=C11>Audiovisuales
+                            <input type=radio value="Artículos" name=C11>Artículos 
+                            <input type=radio value="Revistas" name=C11>Revistas 
+                            <input type=radio value="Mapas" name=C11>Mapas 
+                            <input type=radio value="Test" name=C11>Test 
+                        </fieldset>
+                        <fieldset>
+                            Elija la Biblioteca que desea consultar
+                            <select style="FONT-SIZE: 11px" size=1 name=C1> 
+                                <option selected>Sistema de Bibliotecas</option> 
+                                <option>Administración (Posgrado)</option> 
+                                <option>Biblioteca Central</option> 
+                                <option>CC. Comunicación, Turismo y Psicología</option>  
+                                <option>Derecho</option> 
+                                <option>Derecho (Posgrado)</option> 
+                                <option>Filial Norte</option>
+                                <option>Filial Sur</option> 
+                                <option>Ingeniería y Arquitectura</option> 
+                                <option>Instituto de Gobierno</option>
+                                <option>Instituto de Arte</option> 
+                                <option> Medicina Humana </Option> 
+                                <option>Obstetricia y Enfermería</option> 
+                                <option>Odontología</option> 
+                                <option>Pre Universitario</option> 
+                                <option>Villa Deportiva</option>
+                            </select> 
+                        </fieldset>
+                        <fieldset>
+                            ordenado
+                            <select name="C2" id="">
+                                <option selected value="A%F1o">Año</option> 
+                                <option value="Título">Título</option> 
+                                <option value="Autor">Autor</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            Idioma
+                            <select name=C9> 
+                                <option selected>Todos</option>
+                                <option>Español</option> 
+                                <option>Inglés</option> 
+                                <option>Portugués</option>
+                            </select> 
+                        </fieldset>
+                        <fieldset>
+                            Años
+                            <input value=0000-9999 name=C10 type="text">
+                        </fieldset>
+                        <fieldset>
+                            <button type="submit" title="Search" aria-label="Search">
+                                <i aria-hidden="true" class="fas fa-search"></i>
+                            </button>
+                            <button type="button" id="inicio--close-dialog">Close</button>
+                        </fieldset>
+                    </dialog>
+                    <!--========================================= END MODAL =========================================-->
                 </form>
                 <div class="inicio__buscador__externo">
                     <a href="#">

@@ -26,4 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+    // FORMULARIO
+    const opendialog = document.getElementById("inicio--open-dialog");
+    const closedialog = document.getElementById("inicio--close-dialog");
+    const dialog = document.getElementById("inicio__dialog");
+
+    opendialog.addEventListener("click", () => {
+        dialog.showModal();
+    });
+    closedialog.addEventListener("click", () => {
+        dialog.close();
+    });
 });
