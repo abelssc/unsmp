@@ -200,7 +200,7 @@ ul li {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("/assets/img/facultad_ingenieria_acreditacion.jpg");
+  background-image: url("../img/facultad_ingenieria_acreditacion.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
