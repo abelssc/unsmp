@@ -1,3 +1,29 @@
+@use "variables";
+@use "mixins";
 #anuncios{
     position: relative;
+    padding: 50px 0;
+}
+.glider{
+    overflow: hidden;
+}
+.glider-prev,.glider-next{
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: variables.$bg-secondary;
+    color: variables.$white;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background-color: darken(variables.$bg-secondary, 10%);
+    }
+}
+.glider-prev{
+    left: 0 !important;
+}
+.glider-next{
+    right: 0 !important;
 }

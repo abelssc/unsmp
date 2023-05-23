@@ -1,0 +1,57 @@
+@use "variables";
+@use "mixins";
+#recursos{
+    padding: 50px 0 0;
+}
+.recursos__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.recursos__card{
+    border: 1px solid variables.$bg-secondary;
+    border-radius: 0.25rem;
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    @include mixins.md{
+        width: calc(50% - 2rem);
+    }
+    @include mixins.lg{
+        width: calc(33.33% - 2rem);
+    }
+    @include mixins.xl{
+        width: calc(25% - 2rem);
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    h3{
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: variables.$bg-primary;
+    }
+    a{
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: variables.$bg-primary;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    p{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: variables.$txt-secondary;
+    }
+}

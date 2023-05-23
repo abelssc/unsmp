@@ -60,7 +60,7 @@
                     </li>
                     <li class="list__desplegable">
                         <a href="#">Institucional <i class="fa-solid fa-caret-down"></i></a>
-                        <ul>
+                        <ul class="">
                             <li>
                                 <a href="#">Informaci&oacute;n General</a>
                             </li>
@@ -83,7 +83,7 @@
                     </li>
                     <li class="list__desplegable">
                         <a href="#">Servicios <i class="fa-solid fa-caret-down"></i></a>
-                        <ul>
+                        <ul class="">
                             <li>
                                 <a href="#">Cat&aacute;logo en Linea</a>
                             </li>
@@ -96,7 +96,7 @@
                             <li class="list__desplegable">
                                 <a href="#">
                                     &Uacute;ltimas Adquisiciones<i class="fa-solid fa-caret-down"></i></a>
-                                <ul>
+                                <ul class="">
                                     <li>
                                         <a href="#">Libros</a>
                                     </li>
@@ -120,8 +120,8 @@
                         </ul>
                     </li>
                     <li class="list__desplegable">
-                        <a href="#">Intereses <i class="fa-solid fa-caret-down"></i></a>
-                        <ul>
+                        <a href="#" class="">Intereses <i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="">
                             <li>
                                 <a href="#">Enlaces de Interes</a>
                             </li>
@@ -293,13 +293,21 @@
             <h2>Anuncios</h2>
             <div class="glider-contain">
                 <div class="glider">
-                    <div>your content here</div>
-                    <div>your content here</div>
-                    <div>your content here</div>
-                    <div>your content here</div>
+                    <div><img src="assets/img/libros noticias.jpeg" alt=""></div>
+                    <div><img src="assets/img/noticia mesa de trabajo.jpg" alt=""></div>
+                    <div><img src="assets/img/CAMPUS.jpg" alt=""></div>
+                    <div><img src="assets/img/facultad_ingenieria_acreditacion.jpg" alt=""></div>
+                    <div><img src="assets/img/libros noticias.jpeg" alt=""></div>
+                    <div><img src="assets/img/noticia mesa de trabajo.jpg" alt=""></div>
+                    <div><img src="assets/img/CAMPUS.jpg" alt=""></div>
+                    <div><img src="assets/img/facultad_ingenieria_acreditacion.jpg" alt=""></div>
+                    <div><img src="assets/img/libros noticias.jpeg" alt=""></div>
+                    <div><img src="assets/img/noticia mesa de trabajo.jpg" alt=""></div>
+                    <div><img src="assets/img/CAMPUS.jpg" alt=""></div>
+                    <div><img src="assets/img/facultad_ingenieria_acreditacion.jpg" alt=""></div>
                 </div>
-                <button aria-label="Previous" class="glider-prev">«</button>
-                <button aria-label="Next" class="glider-next">»</button>
+                <button aria-label="Previous" class="glider-prev"><i class="fa-solid fa-caret-left"></i></button>
+                <button aria-label="Next" class="glider-next"><i class="fa-solid fa-caret-right"></i></button>
                 <div role="tablist" class="dots"></div>
             </div>
         </div>
@@ -307,12 +315,38 @@
     <section id="recursos">
         <div class="container">
             <h2>Recursos</h2>
-            <div>
+            <div class="recursos__list">
                 <div class="recursos__card">
-                    <img src="" alt="">
-                    <h3>subtitule</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat velit reiciendis pariatur! Maxime laudantium beatae soluta molestias! Eius enim perspiciatis quidem! Voluptates, necessitatibus alias pariatur dolorum impedit amet consectetur repudiandae?</p>
-                    <a href="#"></a>
+                    <div class="recursos__card__logo">
+                        <img src="assets/img/graduate.jpg" alt="">
+                    </div>
+                    <h3>Adquisiciones</h3>
+                    <p>Acceda al buscador de los ultimos ingresos de libros, tesis, revistas y audiovisuales del Sibus. Sólo debe elegir el tema de su interés, la biblioteca y el tipo de material.</p>
+                    <a href="#">Leer m&aacute;s<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="recursos__card">
+                    <div class="recursos__card__logo">
+                        <img src="assets/img/search.jpg" alt="">
+                    </div>
+                    <h3>Investigaciones</h3>
+                    <p>Registro de proyectos de investigación en el Proceso de Ejecución. El buscador de las investigaciones ofrece información sobre los autores, financiadores, cronograma y presupuesto.</p>
+                    <a href="#">Leer m&aacute;s<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="recursos__card">
+                    <div class="recursos__card__logo">
+                        <img src="assets/img/martino.png" alt="">
+                    </div>
+                    <h3>Espacio Martino</h3>
+                    <p>Martin es un ratón de biblioteca. En esta sección el lo guiará para que conozca los recursos, servicios y novdades del Sibus.</p>
+                    <a href="#">Leer m&aacute;s<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="recursos__card">
+                    <div class="recursos__card__logo">
+                        <img src="assets/img/book.png" alt="">
+                    </div>
+                    <h3>Portal Acad&eacute;mico</h3>
+                    <p>El acceso al portal académico es el proceso mediante el cual se proporciona al estudiante acceso virtual a la información académica.</p>
+                    <a href="#">Leer m&aacute;s<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -320,18 +354,21 @@
     <section id="contacta-biblioteca">
         <div class="container">
             <h2>Contacta Biblioteca</h2>
-            <div>
+            <div class="biblioteca__list">
                 <div>
-                    <h3>Horario de Atencion</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis neque tempore consequatur, hic ea quae repellendus, deleniti eos eveniet blanditiis assumenda perspiciatis? Sint deleniti ipsam quasi pariatur, temporibus tenetur expedita?</p>
+                    <h3>Horario de Biblioteca</h3>
+                    <p>Lunes a Viernes de 8:00 am a 10:00pm </p>
+                    <p>Sábados de 8:00am a 5:00pm</p>
                 </div>
                 <div>
                     <h3>Pregúntanos</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis neque tempore consequatur, hic ea quae repellendus, deleniti eos eveniet blanditiis assumenda perspiciatis? Sint deleniti ipsam quasi pariatur, temporibus tenetur expedita?</p>
+                    <p>Teléfono: (511) 362-0064</p>
+                    <p>Anexo 3191</p>
                 </div>
                 <div>
                     <h3>Ubicación</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis neque tempore consequatur, hic ea quae repellendus, deleniti eos eveniet blanditiis assumenda perspiciatis? Sint deleniti ipsam quasi pariatur, temporibus tenetur expedita?</p>
+                    <p>Sede Lima: Ciudad Universitaria Jr.</p>
+                    <p>Las Calandrias S/n Santa Anita, Lima - Perú</p>
                 </div>
             </div>
         </div>
@@ -463,12 +500,28 @@
         window.addEventListener('load', function () {
             new Glider(document.querySelector('.glider'), {
                 slidesToShow: 1,
+                slidesToScroll: 1,
                 dots: '.dots',
                 draggable: true,
                 arrows: {
                     prev: '.glider-prev',
                     next: '.glider-next'
-                }
+                },
+                responsive: [
+                    {
+                    breakpoint: 450,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                        }
+                    },{
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4
+                        }
+                    }
+                ]
             });
         })
     </script>

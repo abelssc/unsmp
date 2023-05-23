@@ -7,21 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const list__desplegable = document.querySelectorAll('.list__desplegable');
     list__desplegable.forEach((list) => {
         list.addEventListener('mouseover', (e) => {
+            console.log("mouseover");
             list.firstElementChild.lastElementChild.classList.add('rotate');
             list.lastElementChild.classList.add('show');
         });
         list.addEventListener('mouseout', (e) => {
+            console.log("mouseout");
             list.firstElementChild.lastElementChild.classList.remove('rotate');
             list.lastElementChild.classList.remove('show');
         });
         // el primer hijo va a ser el responsable de desplegar el menu, cualquier otro elemento no lo hara
         list.addEventListener('click', (e) => {
             if(e.target==list.firstElementChild){
-                e.preventDefault();
                 list.firstElementChild.lastElementChild.classList.toggle('rotate');
                 list.lastElementChild.classList.toggle('show');
+                e.preventDefault();
             }
             e.stopPropagation();
+            
         });
 
     });
