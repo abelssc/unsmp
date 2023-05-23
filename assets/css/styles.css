@@ -20,6 +20,27 @@ ul li {
   list-style: none;
 }
 
+select {
+  border: none;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  width: 100%;
+}
+select:hover {
+  cursor: pointer;
+}
+
+input {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  width: 100%;
+}
+input:focus {
+  outline: none;
+}
+
 .container {
   width: 100%;
   margin-right: auto;
@@ -51,6 +72,30 @@ ul li {
   .container {
     max-width: 1320px;
   }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.input-text {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+}
+.input-text:focus {
+  outline: none;
 }
 
 .header {
@@ -243,7 +288,15 @@ ul li {
 }
 .inicio__center form {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .inicio__center form {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
 }
 .inicio__center form #inicio__buscador {
   width: 100%;
@@ -254,6 +307,24 @@ ul li {
 }
 .inicio__center form #inicio__buscador:focus {
   outline: none;
+}
+.inicio__center form #inicio__options {
+  display: flex;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .inicio__center form #inicio__options {
+    width: auto;
+  }
+}
+.inicio__center form #inicio__options select {
+  width: 100%;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .inicio__center form #inicio__options select {
+    width: auto;
+  }
 }
 .inicio__center form button[type=submit] {
   background-color: #bd1714;
@@ -276,6 +347,35 @@ ul li {
 }
 .inicio__center form button[type=button]:hover {
   background-color: #070707;
+}
+.inicio__center form #inicio__dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  width: 100%;
+  max-width: 700px;
+}
+.inicio__center form #inicio__dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.inicio__center form #inicio__dialog .inicio__dialog__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inicio__center form #inicio__dialog .inicio__dialog__content .dialog__content__header {
+  display: flex;
+  justify-content: space-between;
+}
+.inicio__center form #inicio__dialog .inicio__dialog__content [name=C3] {
+  max-width: 50px;
+}
+.inicio__center form #inicio__dialog .inicio__dialog__content [name=C6] {
+  width: auto;
+}
+.inicio__center form #inicio__dialog .inicio__dialog__content > div {
+  display: flex;
 }
 .inicio__center .inicio__buscador__externo {
   display: flex;
