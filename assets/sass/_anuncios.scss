@@ -1,24 +1,21 @@
 @use "variables";
 @use "mixins";
 #anuncios{
-    position: relative;
     padding: 50px 0;
 }
 .glider{
-    overflow: hidden;
+    //firefox
+    scrollbar-width: none;
+    position: relative;
 }
 .glider-prev,.glider-next{
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2rem;
-    height: 2rem;
     border-radius: 50%;
-    background-color: variables.$bg-secondary;
-    color: variables.$white;
+    padding: .5rem !important;
     border: none;
     cursor: pointer;
+    color: variables.$txt-primary !important;
     &:hover{
-        background-color: darken(variables.$bg-secondary, 10%);
+        opacity: .5;
     }
 }
 .glider-prev{

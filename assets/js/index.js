@@ -1,32 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburguer = document.querySelector('.header__nav_hamburger');
+    const matchMediaMobile = window.matchMedia('(max-width: 768px)').matches;
+    const hamburguers = document.querySelectorAll('.header__nav_hamburger');
     const menu = document.querySelector('.header__nav_list');
-    hamburguer.addEventListener('click', () => {
-        menu.classList.toggle('show');
+    hamburguers.forEach(hamburguer => {
+        hamburguer.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
     });
+
     const list__desplegable = document.querySelectorAll('.list__desplegable');
     list__desplegable.forEach((list) => {
-        list.addEventListener('mouseover', (e) => {
-            console.log("mouseover");
-            list.firstElementChild.lastElementChild.classList.add('rotate');
-            list.lastElementChild.classList.add('show');
-        });
-        list.addEventListener('mouseout', (e) => {
-            console.log("mouseout");
-            list.firstElementChild.lastElementChild.classList.remove('rotate');
-            list.lastElementChild.classList.remove('show');
-        });
-        // el primer hijo va a ser el responsable de desplegar el menu, cualquier otro elemento no lo hara
+        //estos eventos solo deberian ejecutarse en desktop ya que en mobile se despliega con el click
+        if (!matchMediaMobile) {
+            list.addEventListener('mouseenter', (e) => {
+                list.firstElementChild.lastElementChild.classList.add('rotate');
+                list.lastElementChild.classList.add('show');
+            });
+            list.addEventListener('mouseleave', (e) => {
+                list.firstElementChild.lastElementChild.classList.remove('rotate');
+                list.lastElementChild.classList.remove('show');
+            });
+        }
+        //el primer hijo va a ser el responsable de desplegar el menu, cualquier otro elemento no lo hara
         list.addEventListener('click', (e) => {
-            if(e.target==list.firstElementChild){
+            const firstChild = list.firstElementChild;
+            if (e.target == firstChild || e.target.matches(`${firstChild.tagName} *`)) {
                 list.firstElementChild.lastElementChild.classList.toggle('rotate');
                 list.lastElementChild.classList.toggle('show');
                 e.preventDefault();
             }
             e.stopPropagation();
-            
         });
-
     });
 
     // FORMULARIO

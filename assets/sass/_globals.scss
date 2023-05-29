@@ -7,9 +7,13 @@ html{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 a{
     text-decoration: none;
+}
+a:focus,a:visited,a:active{
+    outline: none;
 }
 ul{
     list-style: none;
