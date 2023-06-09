@@ -673,7 +673,7 @@ body {
 }
 
 .institucional__banner {
-  background-image: url("/assets/img/facultad_ingenieria_acreditacion.jpg");
+  background-image: url("../img/facultad_ingenieria_acreditacion.jpg");
   height: 200px;
 }
 .institucional__banner h1 {
@@ -681,7 +681,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding-top: 100px;
+  padding-top: 75px;
 }
 
 .institucional__navegacion ul {

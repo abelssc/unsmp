@@ -5,14 +5,14 @@
     position:sticky
 }
 .institucional__banner{
-    background-image: url("/assets/img/facultad_ingenieria_acreditacion.jpg");
+    background-image: url("../img/facultad_ingenieria_acreditacion.jpg");
     height: 200px;
     h1{
         color: variables.$white;
         font-size: 2rem;
         font-weight: 700;
         text-transform: uppercase;
-        padding-top: 100px;
+        padding-top: 75px;
     }
 }
 .institucional__navegacion{
