@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const matchMediaMobile = window.matchMedia('(max-width: 768px)').matches;
-    const hamburguers = document.querySelectorAll('.header__nav_hamburger');
+    const hamburguer = document.querySelector('.header__nav_hamburger');
     const menu = document.querySelector('.header__nav_list');
-    hamburguers.forEach(hamburguer => {
-        hamburguer.addEventListener('click', () => {
-            menu.classList.toggle('show');
-        });
+
+    hamburguer.addEventListener('click', () => {
+        hamburguer.querySelector('.fa-solid').classList.toggle('fa-bars');
+        hamburguer.querySelector('.fa-solid').classList.toggle('fa-close');
+        menu.classList.toggle('show');
+
     });
 
     const list__desplegable = document.querySelectorAll('.list__desplegable');

@@ -254,6 +254,7 @@ body {
   align-items: center;
   padding: 1rem;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .header__nav_hamburger {
@@ -271,14 +272,14 @@ body {
 .header__nav_list {
   display: none;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   flex-direction: column;
   background-color: #fff;
   width: 100%;
-  max-height: 100vh;
-  height: 100vh;
+  max-height: 70vh;
   overflow: scroll;
+  transform: translateY(100%);
 }
 @media (min-width: 768px) {
   .header__nav_list {
@@ -673,14 +674,13 @@ body {
 
 .institucional__banner {
   background-image: url("/assets/img/facultad_ingenieria_acreditacion.jpg");
-  height: 300px;
+  height: 200px;
 }
 .institucional__banner h1 {
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
   padding-top: 100px;
 }
 
@@ -712,7 +712,7 @@ body {
   gap: 1rem;
 }
 .institucional__main article h2 {
-  color: #6c757d;
+  color: #bd1714;
   font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
