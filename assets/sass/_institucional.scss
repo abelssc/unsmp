@@ -50,7 +50,7 @@
             text-transform: uppercase;
         }
         h3{
-            color: variables.$txt-secondary;
+            color: variables.$txt-primary;
             font-size: 1.2rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -62,15 +62,106 @@
     }
 }
 .institucional__article__contenido{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    @include mixins.md{
-        grid-template-columns: 1fr 1fr;
+}
+.informacion__contenido{ 
+    color: variables.$txt-p-color;
+    margin-top: 2rem;
+    p{
+        margin-bottom: 1rem;
     }
+   
 }
 .institucional__article-reverse-md{
     @include mixins.md{
         grid-row-start: 1;
+    }
+}
+
+#reglamento{
+    a{
+        color: variables.$txt-primary;
+        background-color: variables.$bg-tertiary;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        &:hover{
+            color: variables.$white;
+            background-color: variables.$bg-primary;
+        }
+    }
+}
+#contacto{
+    .cards-personal{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        .card-personal{
+            width: 100%;
+            max-width: 300px;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            background-color: variables.$white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .personal-foto{
+                width: 100%;
+                height: 300px;
+                border-radius: 0.25rem;
+            }
+            .card-info{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                color: variables.$txt-p-color;
+                font-size: 1rem;
+                .personal-nombre{
+                    color: variables.$txt-p-color;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+#directorio{
+    .cards-directorio{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        .card-directorio{
+            width: 100%;
+            max-width: 450px;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            background-color: variables.$white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .directorio-foto{
+                width: 100%;
+                height: 300px;
+                border-radius: 0.25rem;
+            }
+            .card-info{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                color: variables.$txt-p-color;
+                font-size: 1rem;
+                .directorio-nombre{
+                    color: variables.$txt-p-color;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+        }
     }
 }

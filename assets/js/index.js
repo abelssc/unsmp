@@ -34,16 +34,30 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
         });
     });
+});
 
-    // FORMULARIO
-    const opendialog = document.getElementById("inicio--open-dialog");
-    const closedialog = document.getElementById("inicio--close-dialog");
-    const dialog = document.getElementById("inicio__dialog");
+let prevScrollPos = window.scrollY;
+let header = document.querySelector('.header');
+document.addEventListener("click", (e) => {
+    if(e.target.closest('#inicio--open-dialog')) {
+        document.getElementById("inicio__dialog").showModal();
+    }
+    if(e.target.closest('#inicio--close-dialog')) {
+        document.getElementById("inicio__dialog").close();
+    }
+});
 
-    opendialog.addEventListener("click", () => {
-        dialog.showModal();
-    });
-    closedialog.addEventListener("click", () => {
-        dialog.close();
-    });
+window.addEventListener('scroll', function() {
+  const currentScrollPos = window.scrollY;
+  
+  if (currentScrollPos > prevScrollPos) {
+    // El scroll está bajando
+    header.classList.add('header--hide');
+    
+  } else {
+    // El scroll está subiendo
+    header.classList.remove('header--hide');
+  }
+  
+  prevScrollPos = currentScrollPos;
 });

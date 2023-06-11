@@ -74,7 +74,7 @@ section h2{
         max-width: 1320px;
     }
 }
-.contenido_princial .container{
+.contenido_principal .container{
     display: grid;
     grid-template-columns: 1fr;
     padding-top: 50px;
@@ -130,38 +130,42 @@ section h2{
 .img-prueba{
     display: block;
     width: 100%;
-    max-width: 500px;
-    height: 500px;
+    // max-width: 500px;
+    height: 400px;
     background-color: #495057;
 }
 details{
     margin: 1rem;
     summary{
+        background-color: #f0f0f0;
+        border-radius: 3px;
         font-weight: 400;
         color: variables.$txt-secondary;
         cursor: pointer;
+        margin-bottom: .5rem;
         &:focus{
             outline: none;
+        }
+        &::marker{
+            color: variables.$txt-primary;
         }
     }
 }
 .list{
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    list-style: disc ;
+    margin-left: 1rem;
     li{
-        list-style: outside;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-        border-radius: 0.25rem;
-        background-color: #ffffff;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        color: variables.$txt-p-color;
-        &:hover{
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        list-style: disc inside;
+        color: variables.$txt-secondary;
+    
+        &::marker{
+            color: variables.$txt-primary;
         }
+    }
+}
+#routes{
+    a.active{
+        color: variables.$white;
+        background-color: variables.$bg-primary;
     }
 }

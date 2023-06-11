@@ -10,6 +10,10 @@ body{
    width: 100%;
    z-index: 1000;
    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease-in-out;
+   &.header--hide{
+       transform: translateY(-100%);
+   }
 }
 .header__barra{
     background-color: variables.$bg-primary;
