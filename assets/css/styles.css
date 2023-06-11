@@ -95,12 +95,13 @@ section h2 {
 .contenido_principal .container {
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 50px;
+  padding-top: 5rem;
   gap: 1rem;
 }
 @media (min-width: 768px) {
   .contenido_principal .container {
     grid-template-columns: 1fr 3fr;
+    gap: 5rem;
   }
 }
 
@@ -183,10 +184,6 @@ details summary::marker {
   list-style: disc inside;
   color: #6c757d;
 }
-.list li::marker {
-  color: #bd1714;
-}
-
 #routes a.active {
   color: #fff;
   background-color: #bd1714;
@@ -227,7 +224,8 @@ body {
   gap: 1rem;
 }
 .header__barra .header__nombre_usmp img {
-  width: 50px;
+  width: 45px;
+  height: 45px;
 }
 .header__barra .header__nombre_usmp span {
   font-size: 1rem;
@@ -551,6 +549,22 @@ body {
   scrollbar-width: none;
   position: relative;
 }
+.glider .glider-item {
+  position: relative;
+}
+.glider .glider-item .anuncios__content {
+  position: absolute;
+  bottom: 0;
+}
+.glider .glider-item .anuncios__content h3 {
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 .glider-prev, .glider-next {
   border-radius: 50%;
@@ -683,9 +697,8 @@ body {
 }
 .institucional__banner h1 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
-  text-transform: uppercase;
   padding-top: 75px;
 }
 
@@ -717,10 +730,10 @@ body {
   gap: 1rem;
 }
 .institucional__main article h2 {
-  color: #bd1714;
-  font-size: 1.5rem;
+  color: #6c757d;
+  text-align: left;
+  font-size: 2rem;
   font-weight: 700;
-  text-transform: uppercase;
 }
 .institucional__main article h3 {
   color: #bd1714;
@@ -749,25 +762,18 @@ body {
 
 #reglamento a {
   color: #bd1714;
-  background-color: #EBEAEA;
-  padding: 10px 20px;
   cursor: pointer;
-  border-radius: 0.25rem;
-}
-#reglamento a:hover {
-  color: #fff;
-  background-color: #bd1714;
 }
 
 #contacto .cards-personal {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 #contacto .cards-personal .card-personal {
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   padding: 1rem;
   border-radius: 0.25rem;
   background-color: #fff;
@@ -799,11 +805,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 #directorio .cards-directorio .card-directorio {
   width: 100%;
-  max-width: 450px;
+  max-width: 420px;
   padding: 1rem;
   border-radius: 0.25rem;
   background-color: #fff;
