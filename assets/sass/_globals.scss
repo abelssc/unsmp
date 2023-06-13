@@ -40,6 +40,9 @@ input{
     &:focus{
         outline: none;
     }
+    &[type="radio"]{
+        accent-color: variables.$bg-primary;
+    }
 }
 section h2{
     font-size: 2rem;

@@ -1,0 +1,172 @@
+[
+	{
+		"id" : 63,
+		"categoria" : "acceso libre",
+		"titulo" : "JUSTICIA Y TRANSPARENCIA",
+		"contenido" : "Justicia y Transparencia es una base de datos que reúne las sentencias del Tribunal Constitucional emitidas en los procesos constitucionales de Hábeas Data",
+		"imagen" : "logo_justicia.jpg",
+		"link" : "http://www.justiciaytransparencia.pe/",
+		"fecha_creacion" : "2011-07-20",
+		"fecha_modificado" : "2011-07-20"
+	},
+	{
+		"id" : 57,
+		"categoria" : "acceso session",
+		"titulo" : "ProQuest Central",
+		"contenido" : "ProQuest Central proporciona acceso a millones de artículos a texto completo\r\n\r\n",
+		"imagen" : "logo_proquest_central.jpg",
+		"link" : "http://www.sibus.usmp.edu.pe/",
+		"fecha_creacion" : "2011-05-09",
+		"fecha_modificado" : "2014-03-31"
+	},
+	{
+		"id" : 58,
+		"categoria" : "acceso session",
+		"titulo" : "E-Libro",
+		"contenido" : "Contienen información académica en texto completo de libros, en formato PDF, abarcando el área de ciencias médicas, encontrándose la mayor colección disponible en español.\r\n\r\n",
+		"imagen" : "logo_elibro.jpg",
+		"link" : "http://www.sibus.usmp.edu.pe/",
+		"fecha_creacion" : "2011-05-09",
+		"fecha_modificado" : "2014-03-31"
+	},
+	{
+		"id" : 59,
+		"categoria" : "acceso session",
+		"titulo" : "Hinari",
+		"contenido" : "HINARI (Health InterNetwork Access to Research Initiative) es una completa base de datos en salud, con más de 1500 publicaciones científicas biomédicas; que facilitan el flujo de información sanitaria relevante y novedosa a los profesionales de las áreas medicas, investigadores y científicos.\r\n\r\n",
+		"imagen" : "logo_hinari.jpg",
+		"link" : "control.php",
+		"fecha_creacion" : "2011-05-09",
+		"fecha_modificado" : "2014-03-31"
+	},
+	{
+		"id" : 21,
+		"categoria" : "acceso libre",
+		"titulo" : "Buscador Latinoamericano de Ciencias Sociales",
+		"contenido" : "Éste es un sistema que  agrupa diversas fuentes de información electrónica  de acceso abierto y las pone a disposición de la comunidad universitaria a través de Internet.  La ventaja principal del METAbuscador es que amplía el ámbito de las búsquedas y proporciona mayor cantidad de resultados de textos completos digitales que se descargan gratuitamente.\r\n ",
+		"imagen" : "logo_buscador.jpg",
+		"link" : "http://www.flacsoandes.org/buscador  ",
+		"fecha_creacion" : "2010-09-28",
+		"fecha_modificado" : "2010-09-28"
+	},
+	{
+		"id" : 74,
+		"categoria" : "acceso session",
+		"titulo" : "Psicodoc",
+		"contenido" : "PSICODOC es una base de datos que recogen referencias bibliográficas de Psicología y ciencias afines. Contienen miles de referencias de artículos de revistas españolas y latinoamericanas (con enlaces a textos completos), actas de congresos y capítulos de libros, así como reseñas y resúmenes de presentaciones de congresos. Disponible desde 1975. Actualización mensual.\r\n\r\nEl acceso es solo interno, dentro de las facultades de la Universidad de San Martín de Porres.",
+		"imagen" : "psicodoc.jpg",
+		"link" : "",
+		"fecha_creacion" : "2013-07-24",
+		"fecha_modificado" : "2013-07-24"
+	},
+	{
+		"id" : 61,
+		"categoria" : "acceso session",
+		"titulo" : "Multilegis",
+		"contenido" : "Multilegis un completo y actualizado sistema de información jurídica.\r\n\r\n",
+		"imagen" : "logo_multilegis.jpg",
+		"link" : "",
+		"fecha_creacion" : "2011-05-09",
+		"fecha_modificado" : "2013-07-18"
+	},
+	{
+		"id" : 20,
+		"categoria" : "acceso libre",
+		"titulo" : "UNESCO",
+		"contenido" : "Reúne mapas, textos, fotos, grabaciones y películas de todos los tiempos y explica en siete idiomas las joyas y reliquias culturales de todas las bibliotecas del planeta. \r\nLa BDM no ofrecerá documentos corrientes, sino \"con valor de patrimonio, que permitirán apreciar y conocer mejor las culturas del mundo en idiomas diferentes: árabe, chino, inglés, francés, ruso, español y portugués. Pero hay documentos en línea en más de 50  idiomas\". ",
+		"imagen" : "logo_unesco.jpg",
+		"link" : "http://www.wdl.org/",
+		"fecha_creacion" : "2010-09-08",
+		"fecha_modificado" : "2010-09-09"
+	},
+	{
+		"id" : 9,
+		"categoria" : "acceso libre",
+		"titulo" : "Biblioteca Virtual en Salud",
+		"contenido" : "Es una colección descentralizada y dinámica de fuentes de información; opera como red de productos y servicios en Internet. A través de este portal se podrá acceder a Scielo.",
+		"imagen" : "logo_salud.jpg",
+		"link" : "http://www.bireme.br",
+		"fecha_creacion" : "2008-07-11",
+		"fecha_modificado" : "2011-03-17"
+	},
+	{
+		"id" : 10,
+		"categoria" : "acceso libre",
+		"titulo" : "Scielo",
+		"contenido" : "Scielo (Scientific Electronic Library Online), base de datos que contiene revistas científicas a texto completo, enfocado hacias las necesidades de la comunicación científica en los países en desarrollo - sobre todo en Brasil, América Latina y el Caribe.",
+		"imagen" : "logo_scielo.jpg",
+		"link" : "http://www.scielo.org/php/index.php?lang=es",
+		"fecha_creacion" : "2008-07-11",
+		"fecha_modificado" : "2011-03-17"
+	},
+	{
+		"id" : 49,
+		"categoria" : "acceso session",
+		"titulo" : "EBSCOHOST ",
+		"contenido" : "Base de datos multidisciplinaria, contiene el texto completo y datos referenciales de las revistas académicas de mayor relevancia, entre las que podemos destacar ingenierías, administración, negocios, contabilidad, educación, comunicaciones, entre otras. La mayoría de las revistas son arbitradas (científicas) y en algunos casos desde el inicio de su publicación.\r\nIngrese mediando el enlace de EBSCO del  Metabuscador de la parte derecha de la Página web una ves iniciado Sesión.\r\n",
+		"imagen" : "logo_ebsco.jpg",
+		"link" : "http://www.sibus.usmp.edu.pe/",
+		"fecha_creacion" : "2011-04-27",
+		"fecha_modificado" : "2014-03-31"
+	},
+	{
+		"id" : 60,
+		"categoria" : "acceso session",
+		"titulo" : "SPIJ",
+		"contenido" : "Proporciona información jurídica histórica y actualizada sistematizada por el Ministerio de Justicia. Consúltela en las salas audiovisuales y bases de datos. \r\n\r\n",
+		"imagen" : "logo_spij.jpg",
+		"link" : "",
+		"fecha_creacion" : "2011-05-09",
+		"fecha_modificado" : "2013-07-18"
+	},
+	{
+		"id" : 34,
+		"categoria" : "acceso libre",
+		"titulo" : "Portal de Revistas AcadÉmicas",
+		"contenido" : "Portal de Revistas Académicas cuenta con un robusto sistema de gestión y publicación de revistas académicas en formato electrónico que permite un manejo eficiente y unificado de todo el proceso editorial, desde su redacción hasta su indexación, y el control en línea. ",
+		"imagen" : "logo_revista.jpg",
+		"link" : "http://www.revistas.uchile.cl/",
+		"fecha_creacion" : "2011-04-15",
+		"fecha_modificado" : "2011-04-26"
+	},
+	{
+		"id" : 69,
+		"categoria" : "acceso session",
+		"titulo" : "World Tourism OrganizatioN",
+		"contenido" : "Base de datos que contiene información para carreras en turismo.\r\n",
+		"imagen" : "logo_who.jpg",
+		"link" : "http://www.wtoelibrary.org",
+		"fecha_creacion" : "2012-04-12",
+		"fecha_modificado" : "2012-04-12"
+	},
+	{
+		"id" : 65,
+		"categoria" : "acceso libre",
+		"titulo" : "Sistema de Difusión de los Censos Nacionales ",
+		"contenido" : "El Sistema de Difusión de los Censos Nacionales es una herramienta\r\namigable de gran potencial que facilita el uso de la información\r\nestadística generada a partir de los resultados de los Censos\r\nNacionales a través de consultas que generan respuestas en tiempo\r\nreal\r\n",
+		"imagen" : "LogoDWH.jpg",
+		"link" : "http://www.inei.gob.pe/",
+		"fecha_creacion" : "2011-11-28",
+		"fecha_modificado" : "2012-01-26"
+	},
+	{
+		"id" : 76,
+		"categoria" : "acceso session",
+		"titulo" : "Scopus",
+		"contenido" : "SciVerse Scopus es la base de datos de citas y resúmenes de mayor tamaño de SciVerse de Elsevier, un ecosistema científico vital que facilita la colaboración, premia la innovación y acelera el propio proceso de investigación. SciVerse integra el contenido de confianza y familiar de SciVerse Scopus, las publicaciones revisadas por pares, los artículos de texto completo de SciVerse ScienceDirect (según sus suscripciones) e Internet con aplicaciones innovadoras desarrolladas por la comunidad que enriquecen y amplían el valor del contenido",
+		"imagen" : "scopus.jpg",
+		"link" : "http://www.scopus.com/",
+		"fecha_creacion" : "2014-08-06",
+		"fecha_modificado" : "2014-08-28"
+	},
+	{
+		"id" : 78,
+		"categoria" : "acceso session",
+		"titulo" : "SciVerse ScienceDirect",
+		"contenido" : "SciVerse ScienceDirect es una base de datos de texto completo revisada por pares de Elsevier que contiene más de 14.000 títulos de libros electrónicos y más de 2.500 títulos de revistas científicas en Ciencia, Tecnología y Medicina.\r\nAdemás de la búsqueda por palabras claves, la búsqueda de imágenes y el valioso contenido adicional asociado con cada publicación pueden ser encontrados en las formas de audio, vídeo y conjunto de datos.",
+		"imagen" : "sciencedirect.jpg",
+		"link" : "http://www.sciencedirect.com/",
+		"fecha_creacion" : "2014-08-26",
+		"fecha_modificado" : "2014-08-28"
+	}
+]

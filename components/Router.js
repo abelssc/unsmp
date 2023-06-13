@@ -1,14 +1,20 @@
 const routes = {
     "#informacion-general": "informacion-general.html",
-    "#historia":"historia.html",
-    "#directorio":"directorio.html",
-    "#reglamento":"reglamento.html",
-    "#nuestra-coleccion":"nuestra-coleccion.html",
-    "#contacto":"contacto.html",
+    "#historia": "historia.html",
+    "#directorio": "directorio.html",
+    "#reglamento": "reglamento.html",
+    "#nuestra-coleccion": "nuestra-coleccion.html",
+    "#contacto": "contacto.html",
+    "#biblioteca-virtual": "biblioteca-virtual.html",
+    "#catalogo-virtual": "catalogo-virtual.html",
+    "#repositorio-academico": "repositorio-academico.html",
+    "#ultimas-adquisiciones": "ultimas-adquisiciones.html",
+    "#infonautas": "infonautas.html",
+    "#tramite-carne": "tramite-carne.html",
 };
 const hashes = Object.keys(routes);
-const Render=($contenido,$hash)=>{
-    const nav_routes=document.getElementById("routes");
+const Render = ($contenido, $hash) => {
+    const nav_routes = document.getElementById("routes");
     nav_routes.querySelectorAll("a").forEach(link => link.classList.remove('active'));
     nav_routes.querySelector(`[href="${$hash}"]`).classList.add("active");
     const menu = document.querySelector('.header__nav_list');
@@ -21,8 +27,8 @@ const Render=($contenido,$hash)=>{
     cargarData($hash);
 
 };
-const cargarData=($hash)=>{
-    switch($hash){
+const cargarData = ($hash) => {
+    switch ($hash) {
         case "#contacto":
             const personalBibliotecaCentral = [
                 {
@@ -80,8 +86,8 @@ const cargarData=($hash)=>{
                     foto: ""
                 },
             ];
-        
-            (()=>{
+
+            (() => {
                 const template = document.querySelector(".template-personal").content;
                 const fragment = document.createDocumentFragment();
                 const cardsPersonal = document.querySelector(".cards-personal");
@@ -99,99 +105,99 @@ const cargarData=($hash)=>{
                 });
                 cardsPersonal.appendChild(fragment);
             })();
-        break;
+            break;
         case "#directorio":
             const directorioBibliotecas = [
                 {
-                    nombre:"Biblioteca Central",
-                    direccion:"Jr. Las Calandrias 151 - 291 Santa Anita",
-                    telefono:"(511) 317-2130 Anexo 3191",
-                    anexo:"<br>Fax: (511) 317-2130 ó 362-0064 Anexo 3201",
-                    personalCargo:"Korelia Alhuay Aliaga",
-                    correo:"kalhuaya@usmp.pe"
+                    nombre: "Biblioteca Central",
+                    direccion: "Jr. Las Calandrias 151 - 291 Santa Anita",
+                    telefono: "(511) 317-2130 Anexo 3191",
+                    anexo: "<br>Fax: (511) 317-2130 ó 362-0064 Anexo 3201",
+                    personalCargo: "Korelia Alhuay Aliaga",
+                    correo: "kalhuaya@usmp.pe"
                 },
                 {
-                    nombre:"Biblioteca de la Facultad de Ciencias de la Comunicación, Turismo y Psicología",
-                    direccion:"Av. Tomas Marsano 151 Surquillo",
-                    telefono:"513-6300",
-                    anexo:"Anexo 2108",
-                    personalCargo:"Lorena Denisse Avalos Molleda",
-                    correo:"lorena_avalos@usmp.pe"
+                    nombre: "Biblioteca de la Facultad de Ciencias de la Comunicación, Turismo y Psicología",
+                    direccion: "Av. Tomas Marsano 151 Surquillo",
+                    telefono: "513-6300",
+                    anexo: "Anexo 2108",
+                    personalCargo: "Lorena Denisse Avalos Molleda",
+                    correo: "lorena_avalos@usmp.pe"
                 },
                 {
-                    nombre:"Biblioteca de la Facultad de Derecho y Ciencias Políticas",
-                    direccion:"Av. La Fontana 1250 La Molina ",
-                    telefono:"(511) 3620064",
-                    anexo:"Anexo 1134",
-                    personalCargo:"Maria del Carmen Zevallos Macciota",
-                    correo:"mzevallosm@usmp.pe biblioteca_fia@usmp.edu.pe"
+                    nombre: "Biblioteca de la Facultad de Derecho y Ciencias Políticas",
+                    direccion: "Av. La Fontana 1250 La Molina ",
+                    telefono: "(511) 3620064",
+                    anexo: "Anexo 1134",
+                    personalCargo: "Maria del Carmen Zevallos Macciota",
+                    correo: "mzevallosm@usmp.pe biblioteca_fia@usmp.edu.pe"
                 },
                 {
-                    nombre:"Biblioteca de la Facultad Medicina Humana",
-                    direccion:"Av. Alameda del Corregidor, Cuadra 15 Las Viñas - La Molina",
-                    telefono:"(511) 365-2300",
-                    anexo:"Anexo: 126",
-                    personalCargo:"Manuel Segismundo Urrutia Mellado - Maria Elena Vejarano",
-                    correo:"murrutiam@usmp.pe biblioteca_medicina@usmp.pe"
+                    nombre: "Biblioteca de la Facultad Medicina Humana",
+                    direccion: "Av. Alameda del Corregidor, Cuadra 15 Las Viñas - La Molina",
+                    telefono: "(511) 365-2300",
+                    anexo: "Anexo: 126",
+                    personalCargo: "Manuel Segismundo Urrutia Mellado - Maria Elena Vejarano",
+                    correo: "murrutiam@usmp.pe biblioteca_medicina@usmp.pe"
                 },
                 {
-                    nombre:"Biblioteca de la Facultad de Obstetricia y Enfermería",
-                    direccion:"Av. Salaverry 1136 - 1144 - Jesús María",
-                    telefono:"471-1171",
-                    anexo:"Anexo 5109",
-                    personalCargo:"Lic. Roxana Vidal de la Cruz",
-                    correo:"rvidald@usmp.pe"
+                    nombre: "Biblioteca de la Facultad de Obstetricia y Enfermería",
+                    direccion: "Av. Salaverry 1136 - 1144 - Jesús María",
+                    telefono: "471-1171",
+                    anexo: "Anexo 5109",
+                    personalCargo: "Lic. Roxana Vidal de la Cruz",
+                    correo: "rvidald@usmp.pe"
                 },
                 {
-                    nombre:"Biblioteca de la Facultad de Odontología",
-                    direccion:"Calle Badajoz 264 - San Luis",
-                    telefono:"346-4761",
-                    anexo:"Anexo 226",
-                    personalCargo:"",
-                    correo:"biblioteca_odo@usmp.pe"
+                    nombre: "Biblioteca de la Facultad de Odontología",
+                    direccion: "Calle Badajoz 264 - San Luis",
+                    telefono: "346-4761",
+                    anexo: "Anexo 226",
+                    personalCargo: "",
+                    correo: "biblioteca_odo@usmp.pe"
                 },
                 {
-                    nombre:"Biblioteca Filial Norte Chiclayo",
-                    direccion:"Av. Los eucaliptos Nº 300 - 304, Urb. La Pradera - Pimentel", 
-                    telefono:"(074) 481150",
-                    anexo:"",
-                    personalCargo:"",
-                    correo:"sibus@usmp.pe"
+                    nombre: "Biblioteca Filial Norte Chiclayo",
+                    direccion: "Av. Los eucaliptos Nº 300 - 304, Urb. La Pradera - Pimentel",
+                    telefono: "(074) 481150",
+                    anexo: "",
+                    personalCargo: "",
+                    correo: "sibus@usmp.pe"
                 },
                 {
-                    nombre:"Biblioteca Filial Sur Arequipa",
-                    direccion:"Biblioteca Filial Sur Arequipa",
-                    telefono:"(054) 20-4528",
-                    anexo:"Anexo 615",
-                    personalCargo:"Abelardo David Quispe Ambrocio",
-                    correo:"aquispea@usmp.pe"
+                    nombre: "Biblioteca Filial Sur Arequipa",
+                    direccion: "Biblioteca Filial Sur Arequipa",
+                    telefono: "(054) 20-4528",
+                    anexo: "Anexo 615",
+                    personalCargo: "Abelardo David Quispe Ambrocio",
+                    correo: "aquispea@usmp.pe"
                 },
                 {
-                    nombre:"Biblioteca Instituto de Arte",
-                    direccion:"Jr. Badajoz N° 264. - San Luis.",
-                    telefono:"584-5197   346-4295",
-                    anexo:"",
-                    personalCargo:"",
-                    correo:"instituto_arte@usmp.pe"
+                    nombre: "Biblioteca Instituto de Arte",
+                    direccion: "Jr. Badajoz N° 264. - San Luis.",
+                    telefono: "584-5197   346-4295",
+                    anexo: "",
+                    personalCargo: "",
+                    correo: "instituto_arte@usmp.pe"
                 },
                 {
-                    nombre:"Biblioteca de Administración en Posgrado",
-                    direccion:"Av. Brasil 1857 - Jesús María",
-                    telefono:"4603333",
-                    anexo:"",
-                    personalCargo:"Coordinador Academico",
-                    correo:"sibus@usmp.pe"
+                    nombre: "Biblioteca de Administración en Posgrado",
+                    direccion: "Av. Brasil 1857 - Jesús María",
+                    telefono: "4603333",
+                    anexo: "",
+                    personalCargo: "Coordinador Academico",
+                    correo: "sibus@usmp.pe"
                 },
                 {
-                    nombre:"Biblioteca Instituto de Gobierno",
-                    direccion:"Calle Martín Dulanto 101, Urb. San Antonio, Miraflores",
-                    telefono:"241 4275",
-                    anexo:"Anexo 118",
-                    personalCargo:"",
-                    correo:"iggp@gobiernoygestionpublica.edu.pe"
+                    nombre: "Biblioteca Instituto de Gobierno",
+                    direccion: "Calle Martín Dulanto 101, Urb. San Antonio, Miraflores",
+                    telefono: "241 4275",
+                    anexo: "Anexo 118",
+                    personalCargo: "",
+                    correo: "iggp@gobiernoygestionpublica.edu.pe"
                 }
             ];
-            (()=>{
+            (() => {
                 const template = document.querySelector(".template-directorio").content;
                 const fragment = document.createDocumentFragment();
                 const cardsDirectorio = document.querySelector(".cards-directorio");
@@ -214,15 +220,49 @@ const cargarData=($hash)=>{
                 );
                 cardsDirectorio.appendChild(fragment);
             })();
+            break;
+        case "#biblioteca-virtual":
+            (() => {
+                fetch("bbdd.json")
+                    .then(rs => rs.ok ? rs.json() : Promise.reject(rs))
+                    .then(json => {
+                        const bibliotecaBbdds = document.querySelector(".biblioteca-virtual_bbdds");
+                        const template = document.querySelector(".template-biblioteca-virtual-bbdd").content;
+                        const fragment = document.createDocumentFragment();
+
+                        json.forEach(bbdd => {
+                            const clone = template.cloneNode(true);
+                            const bibliotecaBbdd = clone.querySelector(".biblioteca-bbdd");
+                            const bbddTitulo = clone.querySelector(".bbdd-titulo");
+                            const bbddContenido = clone.querySelector(".bbdd-contenido");
+                            const bbddImagen = clone.querySelector(".bbdd-imagen img");
+                            const bbddLink = clone.querySelector(".bbdd-link");
+                            const faSolid = clone.querySelector(".fa-solid");
+                            bibliotecaBbdd.dataset.categoria = bbdd.categoria;
+                            bbddTitulo.textContent = bbdd.titulo;
+                            bbddContenido.textContent = bbdd.contenido;
+                            bbddImagen.src = `assets/img/logos/${bbdd.imagen}`;
+                            bbddLink.href = bbdd.link;
+                            faSolid.classList.add(
+                                (bbdd.categoria) === "acceso libre"
+                                ? "fa-lock-open"
+                                : "fa-lock"
+                            );
+                            fragment.appendChild(clone);
+                        });
+                        bibliotecaBbdds.appendChild(fragment);
+                    });
+            })();
+            break;
     }
 }
 
-export const Router=()=> {
-    const { host,hash,pathname } = window.location;
-    if(hashes.includes(hash)){
+export const Router = () => {
+    const { host, hash, pathname } = window.location;
+    if (hashes.includes(hash)) {
         fetch(`components/${routes[hash]}`)
-        .then(rs=>rs.ok?rs.text():Promise.reject(rs))
-        .then((html) => Render(html,hash));
+            .then(rs => rs.ok ? rs.text() : Promise.reject(rs))
+            .then((html) => Render(html, hash));
     }
 };
 
