@@ -303,6 +303,14 @@
         import { Router } from './components/Router.js';
         window.addEventListener("load", Router);
         window.addEventListener("hashchange", Router);
+
+        document.addEventListener("change",e=>{
+            if(e.target.matches("[name=bbdd]")){
+                let filter = e.target.value;
+                cargarDataBibliotecas(filter);
+            }
+        });
+
     </script>
 </body>
 

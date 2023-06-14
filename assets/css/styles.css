@@ -1000,6 +1000,36 @@ body {
   object-fit: cover;
 }
 
+.bbdd_nav_articles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bbdd_nav_articles button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: none;
+  color: #6c757d;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.bbdd_nav_articles button:hover {
+  background-color: #202020;
+  color: #fff;
+}
+.bbdd_nav_articles button.article-prev, .bbdd_nav_articles button.article-next {
+  background-color: #bd1714;
+  color: #fff;
+}
+.bbdd_nav_articles button.article-prev:hover, .bbdd_nav_articles button.article-next:hover {
+  opacity: 0.8;
+}
+.bbdd_nav_articles button.active {
+  background-color: #202020;
+  color: #fff;
+}
+
 #infonautas h3 {
   color: #6c757d;
   font-size: 1.2rem;

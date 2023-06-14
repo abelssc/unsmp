@@ -61,3 +61,72 @@ window.addEventListener('scroll', function() {
   
   prevScrollPos = currentScrollPos;
 });
+
+
+const cargarBibliotecas = (json,inicio,fin) => {
+    const bibliotecaBbdds = document.querySelector(".biblioteca-virtual_bbdds");
+    const template = document.querySelector(".template-biblioteca-virtual-bbdd").content;
+    const fragment = document.createDocumentFragment();
+
+
+
+    json.slice(inicio, fin).forEach(bbdd => {
+        const clone = template.cloneNode(true);
+        const bibliotecaBbdd = clone.querySelector(".biblioteca-bbdd");
+        const bbddTitulo = clone.querySelector(".bbdd-titulo");
+        const bbddContenido = clone.querySelector(".bbdd-contenido");
+        const bbddImagen = clone.querySelector(".bbdd-imagen img");
+        const bbddLink = clone.querySelector(".bbdd-link");
+        const faSolid = clone.querySelector(".fa-solid");
+        bibliotecaBbdd.dataset.categoria = bbdd.categoria;
+        bbddTitulo.textContent = bbdd.titulo;
+        bbddContenido.textContent = bbdd.contenido;
+        bbddImagen.src = `assets/img/logos/${bbdd.imagen}`;
+        bbddLink.href = bbdd.link;
+        faSolid.classList.add(
+            (bbdd.categoria) === "acceso libre"
+            ? "fa-lock-open"
+            : "fa-lock"
+        );
+        fragment.appendChild(clone);
+    });
+    bibliotecaBbdds.innerHTML = "";
+    bibliotecaBbdds.appendChild(fragment);
+};
+const cargarDataBibliotecas = (filter="all") => {
+    fetch("bbdd.json")
+    .then(rs => rs.ok ? rs.json() : Promise.reject(rs))
+    .then(json => {
+        if(filter !== "all") {
+            json = json.filter(bbdd => bbdd.categoria === filter);
+        }
+        cargarBibliotecas(json,0,5);
+        let tamanio = json.length;
+        let cantidadMostrar = 5;
+        let cantidadBotones = Math.ceil(tamanio / cantidadMostrar);
+        let paginacion = document.querySelector(".bbdd_pagination");
+        let fragment = document.createDocumentFragment();
+        for (let i = 1; i <= cantidadBotones; i++) {
+            let boton = document.createElement("button");
+            boton.textContent = i;
+            fragment.appendChild(boton);
+        }
+        paginacion.innerHTML = "";
+        paginacion.appendChild(fragment);
+        let botones = document.querySelectorAll(".bbdd_pagination button");
+        botones[0].classList.add("active");
+        botones.forEach(boton => {
+            boton.addEventListener("click", (e) => {
+                let cantidadMostrar = 5;
+                let pagina = e.target.textContent;
+                let inicio = (pagina - 1) * cantidadMostrar;
+                let fin = inicio + cantidadMostrar;
+                cargarBibliotecas(json, inicio, fin);
+                botones.forEach(boton => {
+                    boton.classList.remove("active");
+                });
+                e.target.classList.add("active");
+            });
+        });
+    });
+}

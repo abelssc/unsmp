@@ -159,6 +159,36 @@
         }
     }
 }
+.bbdd_nav_articles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button{
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        border: none;
+        color: variables.$txt-secondary;
+        font-weight: bold;
+        font-size: 1rem;
+        &:hover{
+            background-color: variables.$bg-secondary;
+            color: variables.$white;
+        }
+        &.article-prev,
+        &.article-next{
+            background-color: variables.$bg-primary;
+            color: variables.$white;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        &.active{
+            background-color: variables.$bg-secondary;
+            color: variables.$white;
+        }
+    }
+}
 //INFONAUTAS
 #infonautas{
     h3{

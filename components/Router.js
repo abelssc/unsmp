@@ -25,7 +25,6 @@ const Render = ($contenido, $hash) => {
 
     document.getElementById("root").innerHTML = $contenido;
     cargarData($hash);
-
 };
 const cargarData = ($hash) => {
     switch ($hash) {
@@ -222,38 +221,8 @@ const cargarData = ($hash) => {
             })();
             break;
         case "#biblioteca-virtual":
-            (() => {
-                fetch("bbdd.json")
-                    .then(rs => rs.ok ? rs.json() : Promise.reject(rs))
-                    .then(json => {
-                        const bibliotecaBbdds = document.querySelector(".biblioteca-virtual_bbdds");
-                        const template = document.querySelector(".template-biblioteca-virtual-bbdd").content;
-                        const fragment = document.createDocumentFragment();
-
-                        json.forEach(bbdd => {
-                            const clone = template.cloneNode(true);
-                            const bibliotecaBbdd = clone.querySelector(".biblioteca-bbdd");
-                            const bbddTitulo = clone.querySelector(".bbdd-titulo");
-                            const bbddContenido = clone.querySelector(".bbdd-contenido");
-                            const bbddImagen = clone.querySelector(".bbdd-imagen img");
-                            const bbddLink = clone.querySelector(".bbdd-link");
-                            const faSolid = clone.querySelector(".fa-solid");
-                            bibliotecaBbdd.dataset.categoria = bbdd.categoria;
-                            bbddTitulo.textContent = bbdd.titulo;
-                            bbddContenido.textContent = bbdd.contenido;
-                            bbddImagen.src = `assets/img/logos/${bbdd.imagen}`;
-                            bbddLink.href = bbdd.link;
-                            faSolid.classList.add(
-                                (bbdd.categoria) === "acceso libre"
-                                ? "fa-lock-open"
-                                : "fa-lock"
-                            );
-                            fragment.appendChild(clone);
-                        });
-                        bibliotecaBbdds.appendChild(fragment);
-                    });
-            })();
-            break;
+            cargarDataBibliotecas();
+        break;
     }
 }
 
