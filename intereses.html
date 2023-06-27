@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/plugins/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/plugins/gliderjs/glider.min.css">
+</head>
+
+<body id="intereses">
+    <header class="header">
+    </header>
+    <section class="intereses__banner banner">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1>Intereses</h1>
+        </div>
+    </section>
+    <section class="contenido_principal">
+        <div class="container">
+            <aside class="intereses__navegacion">
+                <ul id="routes">
+                    <li>
+                        <a href="#enlaces-interes">Enlaces de Interes</a>
+                    </li>
+                    <li>
+                        <a href="#blog-sibus">Blog del Sibus</a>
+                    </li>
+                    <li>
+                        <a href="#guias-manuales">Guias y Manuales</a>
+                    </li>
+                    <li>
+                        <a href="#novedades">Novedades</a>
+                    </li>
+                    <li>
+                        <a href="#martino">El espacio de Martino</a>
+                    </li>
+                </ul>
+            </aside>
+            <main class="intereses__main" id="root">
+
+
+            </main>
+        </div>
+    </section>
+    <footer>
+    </footer>
+    <!-- REENDERIZAMOS HEADER Y FOOTER -->
+    <script type="module">
+        import { Router } from './components/Router.js';
+
+        const components = ['components/header.html', 'components/footer.html'];
+        Promise.all(components.map(component => fetch(component)))
+            .then(responses => {
+                return Promise.all(responses.map(response => response.text()))
+            })
+            .then(html => {
+                document.querySelector("header").innerHTML = html[0];
+                document.querySelector("footer").innerHTML = html[1];
+                //charge assets/js/index.js
+                const script = document.createElement('script');
+                script.src = 'assets/js/index.js';
+                document.body.appendChild(script);
+
+                Router();
+                window.addEventListener("hashchange", Router);
+
+            });
+
+    </script>
+</body>
+
+</html>

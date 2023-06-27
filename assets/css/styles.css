@@ -1038,6 +1038,65 @@ body {
   margin: 1rem 0;
 }
 
+#intereses header {
+  position: sticky;
+}
+
+.intereses__banner {
+  background-image: url("../img/facultad_ingenieria_acreditacion.jpg");
+  height: 200px;
+}
+.intereses__banner h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  padding-top: 75px;
+}
+
+.intereses__navegacion ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.intereses__navegacion li {
+  display: block;
+}
+.intereses__navegacion a {
+  display: block;
+  color: #6c757d;
+  background-color: #EBEAEA;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+.intereses__navegacion a:hover {
+  color: #fff;
+  background-color: #bd1714;
+}
+
+.intereses__main article {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.intereses__main article h2 {
+  color: #6c757d;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.intereses__main article h3 {
+  color: #bd1714;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.intereses__main article p {
+  color: #4A4A49;
+}
+
 footer {
   width: 100%;
   background-color: #202020;
