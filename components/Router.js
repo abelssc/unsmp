@@ -6,11 +6,9 @@ const routes = {
     "#nuestra-coleccion": "nuestra-coleccion.html",
     "#contacto": "contacto.html",
     "#biblioteca-virtual": "biblioteca-virtual.html",
-    "#catalogo-virtual": "catalogo-virtual.html",
     "#repositorio-academico": "repositorio-academico.html",
     "#ultimas-adquisiciones": "ultimas-adquisiciones.html",
     "#infonautas": "infonautas.html",
-    "#tramite-carne": "tramite-carne.html",
 };
 const hashes = Object.keys(routes);
 const Render = ($contenido, $hash) => {
@@ -222,7 +220,7 @@ const cargarData = ($hash) => {
             break;
         case "#biblioteca-virtual":
             cargarDataBibliotecas();
-        break;
+            break;
     }
 }
 

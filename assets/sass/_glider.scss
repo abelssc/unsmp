@@ -1,28 +1,19 @@
 @use "variables";
 @use "mixins";
-#anuncios{
-    padding: 50px 0;
-}
+
 .glider{
     //firefox
     scrollbar-width: none;
     position: relative;
     .glider-item{
         position: relative;
-        .anuncios__content{
-            position: absolute;
-            bottom: 0;
-            h3{
-                width: 100%;
-                padding: 1rem;
-                color: variables.$white;
-                font-size: 14px;
-                font-weight: 400;
-                text-align: center;
-                text-transform: uppercase;
-            }
-        }
     }
+}
+.glider-slide img{
+    width: 100%;
+}
+.glider-item{
+    margin: 0 10px;
 }
 .glider-prev,.glider-next{
     border-radius: 50%;

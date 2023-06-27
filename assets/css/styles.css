@@ -544,7 +544,11 @@ body {
   background-color: #bd1714;
 }
 
-#anuncios {
+#noticias-eventos {
+  padding: 50px 0;
+}
+
+#libros {
   padding: 50px 0;
 }
 
@@ -555,18 +559,13 @@ body {
 .glider .glider-item {
   position: relative;
 }
-.glider .glider-item .anuncios__content {
-  position: absolute;
-  bottom: 0;
-}
-.glider .glider-item .anuncios__content h3 {
+
+.glider-slide img {
   width: 100%;
-  padding: 1rem;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
+}
+
+.glider-item {
+  margin: 0 10px;
 }
 
 .glider-prev, .glider-next {
