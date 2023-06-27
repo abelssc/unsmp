@@ -303,7 +303,7 @@
     </footer>
     <!-- REENDERIZAMOS HEADER Y FOOTER -->
     <script>
-        const components = ['/components/header.html', '/components/footer.html'];
+        const components = ['components/header.html', 'components/footer.html'];
         Promise.all(components.map(component => fetch(component)))
             .then(responses => {
                 return Promise.all(responses.map(response => response.text()))

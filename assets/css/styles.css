@@ -1003,6 +1003,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row !important;
 }
 .bbdd_nav_articles button {
   padding: 0.5rem 1rem;
@@ -1040,6 +1041,7 @@ body {
 footer {
   width: 100%;
   background-color: #202020;
+  margin-top: 50px;
 }
 
 .footer {
