@@ -1,14 +1,22 @@
 const routes = {
+    // INSTITUCIONAL
     "#informacion-general": "informacion-general.html",
     "#historia": "historia.html",
     "#directorio": "directorio.html",
     "#reglamento": "reglamento.html",
     "#nuestra-coleccion": "nuestra-coleccion.html",
     "#contacto": "contacto.html",
+    // SERVICIOS
     "#biblioteca-virtual": "biblioteca-virtual.html",
     "#repositorio-academico": "repositorio-academico.html",
     "#ultimas-adquisiciones": "ultimas-adquisiciones.html",
     "#infonautas": "infonautas.html",
+    // INTERESES
+    "#blog-sibus": "blog-sibus.html",
+    "#enlaces-interes": "enlaces-interes.html",
+    "#guias-manuales":"guias-manuales.html",
+    "#martino":"martino.html",
+    "#novedades":"novedades.html",
 };
 const hashes = Object.keys(routes);
 const Render = ($contenido, $hash) => {
@@ -227,7 +235,8 @@ const cargarData = ($hash) => {
 export const Router = () => {
     const { host, hash, pathname } = window.location;
     if (hashes.includes(hash)) {
-        fetch(`components/${routes[hash]}`)
+        const path=pathname.replace(".html", "");
+        fetch(`components${path}/${routes[hash]}`)
             .then(rs => rs.ok ? rs.text() : Promise.reject(rs))
             .then((html) => Render(html, hash));
     }
