@@ -235,7 +235,8 @@ const cargarData = ($hash) => {
 export const Router = () => {
     const { host, hash, pathname } = window.location;
     if (hashes.includes(hash)) {
-        const path=pathname.replace(".html", "");
+        let path=pathname.replace(".html", "");
+        path=path.replace("/unsmp","");
         fetch(`components${path}/${routes[hash]}`)
             .then(rs => rs.ok ? rs.text() : Promise.reject(rs))
             .then((html) => Render(html, hash));
