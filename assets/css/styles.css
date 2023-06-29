@@ -1163,6 +1163,15 @@ body {
   text-decoration: underline;
 }
 
+.martino_imagen {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .martino_imagen {
+    text-align: left;
+  }
+}
+
 footer {
   width: 100%;
   background-color: #202020;

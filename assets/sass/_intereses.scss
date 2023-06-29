@@ -135,3 +135,9 @@
         text-decoration: underline;
       }
 }
+.martino_imagen{
+    text-align: center;
+    @include mixins.md {
+        text-align: left;
+    }
+}
