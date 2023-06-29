@@ -87,7 +87,7 @@
         }
     }
 }
-#guias-manuales{
+#guias-manuales,#novedades{
     width: 100%;
     ul {
         width: 100%;
@@ -141,3 +141,39 @@
         text-align: left;
     }
 }
+#enlaces-interes{
+      
+      h4 {
+        color: variables.$dark;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      .card-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        a{
+            display: block;
+            margin-bottom: 10px;
+            color: variables.$txt-secondary;
+            &:hover{
+                color: variables.$txt-primary;
+            }
+        }
+        i.fa-solid{
+            color: variables.$txt-primary;
+            // font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+      }
+    }

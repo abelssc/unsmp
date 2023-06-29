@@ -200,3 +200,39 @@
         margin: 1rem 0;
     }
 }
+
+#ultimas-adquisiciones{
+    .adquisiciones-flex{
+        display: flex;
+        flex-wrap: wrap;
+        >a{
+            width: 50%;
+            &:hover,&:hover i{
+                background-color: variables.$bg-secondary;
+                color: variables.$white !important;
+                cursor: pointer;
+            }
+            @include mixins.lg{
+                width: 25%;
+            }
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            margin-bottom: 1rem;
+            i{
+                color: variables.$txt-primary;
+                font-size: 50px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 1rem 0;
+                width: 100%;
+                display: block;
+
+            }
+
+        }
+    }
+}
