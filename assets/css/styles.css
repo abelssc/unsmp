@@ -551,6 +551,14 @@ body {
 #libros {
   padding: 50px 0;
 }
+#libros a {
+  display: block;
+  text-align: end;
+  color: #6c757d;
+}
+#libros a:hover {
+  color: #bd1714;
+}
 
 .glider {
   scrollbar-width: none;
@@ -1234,6 +1242,112 @@ body {
 #enlaces-interes .card i.fa-solid {
   color: #bd1714;
   margin-right: 10px;
+}
+
+#buscador header {
+  position: sticky;
+}
+
+.buscador__banner {
+  background-image: url("../img/facultad_ingenieria_acreditacion.jpg");
+  height: 200px;
+}
+.buscador__banner h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  padding-top: 75px;
+}
+
+.buscador__main article {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.buscador__main article h2 {
+  color: #6c757d;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.buscador__main article h3 {
+  color: #bd1714;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.buscador__main article p {
+  color: #4A4A49;
+}
+
+.buscador_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.buscador_form select {
+  font-size: 1rem;
+}
+.buscador_form button {
+  background-color: #bd1714;
+  color: #fff;
+}
+
+.buscador_radios {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.buscador_radios div {
+  display: flex;
+}
+.buscador_radios div input {
+  width: auto;
+  margin-right: 10px;
+}
+.buscador_radios div label {
+  cursor: pointer;
+}
+
+.buscador-galery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buscador-item {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "datoslibro" "img" "p";
+}
+@media (min-width: 768px) {
+  .buscador-item {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "img datoslibro" "img p";
+  }
+}
+.buscador-item .datos-libro {
+  grid-area: datoslibro;
+}
+.buscador-item .datos-libro h3 {
+  margin: 0 !important;
+}
+.buscador-item .datos-libro h4 {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+.buscador-item img {
+  grid-area: img;
+  object-fit: cover;
+}
+.buscador-item p {
+  grid-area: p;
+  color: #4A4A49;
 }
 
 footer {

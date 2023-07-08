@@ -159,4 +159,13 @@
 }
 #libros{
     padding: 50px 0;
+    a{
+        display: block;
+        text-align: end;
+        color: variables.$txt-secondary;
+        &:hover{
+            color: variables.$txt-primary;
+        }
+
+    }
 }

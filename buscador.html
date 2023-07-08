@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/plugins/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/plugins/gliderjs/glider.min.css">
+</head>
+<body id="buscador">
+    <header class="header">
+
+    </header>
+    <section class="buscador__banner banner">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1>Buscador</h1>
+        </div>
+    </section>
+    <section class="contenido_principal">
+        <div class="container">
+            <aside class="">
+                <form action="" class="buscador_form">
+                    <select name="" id="">
+                        <option value="">Temas</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">Bibliotecas</option>
+                    </select>
+                    <div class="buscador_radios">
+                        <div>
+                            <input type="radio" name="publicacion" id="todos" value="todos">
+                            <label for="todos">Todos</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="publicacion" id="libros" value="libros">
+                            <label for="libros">Libros</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="publicacion" id="tesis" value="tesis">
+                            <label for="tesis">Tesis</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="publicacion" id="revistas" value="revistas">
+                            <label for="revistas">Revistas</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="publicacion" id="audiovisuales" value="audiovisuales">
+                            <label for="audiovisuales">Audiovisuales</label>
+                        </div>
+                    </div>
+                    <button class="btn" type="submit">Buscar</button>
+                    <button class="btn" type="reset">Restablecer</button>
+                </form>
+            </aside>
+            <main class="buscador__main" id="root">
+                <article>
+                    <h2>Libros</h2>
+                    <div class="buscador-galery">
+                        <div class="buscador-item">
+                            <div class="datos-libro">
+                                <h3>{Nombre del Libro}</h3>
+                                <h4>{Nombre del Autor}</h4>
+                            </div>
+                            <img src="assets/img/buscador/libro.jpg" alt="">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eveniet impedit nulla nisi possimus omnis voluptate nesciunt, temporibus esse deserunt quod. Repellendus quibusdam provident, iste tempore ullam officia dolores. Ipsam?</p>
+                        </div>
+                        <div class="buscador-item">
+                            <div class="datos-libro">
+                                <h3>{Nombre del Libro}</h3>
+                                <h4>{Nombre del Autor}</h4>
+                            </div>
+                            <img src="assets/img/buscador/libro.jpg" alt="">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eveniet impedit nulla nisi possimus omnis voluptate nesciunt, temporibus esse deserunt quod. Repellendus quibusdam provident, iste tempore ullam officia dolores. Ipsam?</p>
+                        </div>
+                        <div class="buscador-item">
+                            <div class="datos-libro">
+                                <h3>{Nombre del Libro}</h3>
+                                <h4>{Nombre del Autor}</h4>
+                            </div>
+                            <img src="assets/img/buscador/libro.jpg" alt="">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eveniet impedit nulla nisi possimus omnis voluptate nesciunt, temporibus esse deserunt quod. Repellendus quibusdam provident, iste tempore ullam officia dolores. Ipsam?</p>
+                        </div>
+                    </div>
+                </article>
+
+            </main>
+        </div>
+    </section>
+    <footer>
+    </footer>
+        <!-- REENDERIZAMOS HEADER Y FOOTER -->
+        <script type="module">
+            import {Router} from './components/Router.js';
+        
+            const components = ['components/header.html', 'components/footer.html'];
+            Promise.all(components.map(component => fetch(component)))
+            .then(responses => {
+                return Promise.all(responses.map(response => response.text()))
+            })
+            .then(html => {
+                document.querySelector("header").innerHTML = html[0];
+                document.querySelector("footer").innerHTML = html[1];
+                //charge assets/js/index.js
+                const script = document.createElement('script');
+                script.src = 'assets/js/index.js';
+                document.body.appendChild(script);
+    
+                Router();
+                window.addEventListener("hashchange", Router);
+    
+            });
+    
+        </script>
